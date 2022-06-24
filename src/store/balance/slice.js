@@ -8,8 +8,9 @@ export const balanceSlice = createSlice({
   name: "balance",
   initialState,
   reducers: {
-      deposit: (state) => {
-
+      deposit: (state, action) => {
+        console.log("Hello from the reducer!")
+        state.amount = state.amount + action.payload; 
       }
   },
 });
